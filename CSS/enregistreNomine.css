@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  max-width: 400px;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background-color: black;
+  color: beige;
+  font-size: 15px;
+}
