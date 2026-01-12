@@ -1,0 +1,259 @@
+/* --- GLOBAL --- */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- HERO --- */
+.vote-hero {
+  padding: 120px 100px;
+  text-align: center;
+  /* background: linear-gradient(135deg, #c59d5f, #64605b); */
+
+}
+.vote-hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #c59d5f;
+  font-family: "Pattaya", sans-serif;
+}
+.vote-hero p {
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.95;
+  font-size: 1.2rem;
+}
+
+/* --- TIMER --- */
+.vote-timer {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+}
+#voteCountdown {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 15px;
+}
+#voteStatus {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #c59d5f;
+}
+
+/* --- RÈGLES --- */
+.rules-toggle {
+  background: #c59d5f;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+  display: flex;
+  justify-self: center;
+  margin: 20px 0;
+}
+.rules-toggle:hover {
+  background: #a67c3f;
+  transform: scale(1.05);
+}
+.rules-content {
+  display: none;
+  margin-top: 10px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #c59d5f;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 0 100px;
+  margin-bottom: 40px;
+}
+.rules-content ul {
+  list-style: none;
+  padding: 0;
+}
+.rules-content li {
+  margin: 10px 0;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 20px;
+}
+.rules-content li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #c59d5f;
+  font-weight: bold;
+}
+
+/* --- CATÉGORIES --- */
+.vote-categories {
+  padding: 60px 100px;
+  background: #f9f9f9;
+}
+.vote-categories h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #222;
+  text-align: center;
+  font-weight: 700;
+}
+.vote-categories .subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+.categories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+.category-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.15);
+}
+.category-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.category-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+.btnVote {
+  background-color: #c59d5f;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+.btnVote:hover {
+  background-color: #a67c3f;
+  transform: scale(1.05);
+}
+
+/* --- COUNTDOWN COLORS --- */
+.countdown.pending { color: orange; }
+.countdown.active { color: #4caf50; font-weight: bold; }
+.countdown.closed { color: red; font-weight: bold; }
+
+/* --- RESPONSIVE --- */
+
+/* Petits écrans (smartphones) */
+@media (max-width: 768px) {
+  .vote-hero {
+    padding: 60px 15px 40px;
+  }
+  .vote-hero h1 {
+    font-size: 1.8rem;
+  }
+  .vote-hero p {
+    font-size: 1rem;
+  }
+
+  .vote-timer {
+    padding: 30px 15px;
+  }
+  #voteCountdown {
+    font-size: 1.2rem;
+  }
+
+  .rules-toggle {
+    width: 90%;
+    font-size: 1rem;
+  }
+  .rules-content {
+    font-size: 0.95rem;
+  }
+
+  .vote-categories {
+    padding: 40px 15px;
+  }
+  .categories-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .category-card {
+    width: 90%;
+    max-width: 350px;
+  }
+  .category-card h3 {
+    font-size: 1.1rem;
+  }
+  .btnVote {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
+}
+
+/* Tablettes */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .vote-hero h1 {
+    font-size: 2.2rem;
+  }
+  .categories-grid {
+    gap: 15px;
+  }
+  .category-card {
+    width: 45%;
+  }
+}
+
+/* RESPONSIVE */
+@media (width <= 700px){
+  .vote-hero{
+      padding: 100px 40px;
+  }
+  .vote-hero h1{
+      font-size: 28px;
+  }
+  .vote-hero p {
+    width: 100%;
+  }
+  .rules-content {
+    margin: 0 60px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (width <=450px) {
+
+  .vote-hero{
+      padding: 85px 25px;
+  }
+  .rules-toggle{
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .rules-content {
+    margin: 0 25px;
+    margin-bottom: 40px;
+  }
+     
+}

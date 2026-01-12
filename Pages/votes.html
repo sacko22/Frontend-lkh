@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lumières Kamsaroises Honors - Distinction annuelle pour valoriser les talents et acteurs engagés de la ville de Kamsar.">
+    <meta name="keywords" content="LKH, Kamsar, distinction, cérémonie, Guinée, talents, awards">
+    <title>Page votes - LKH</title>
+    <link rel="stylesheet" href="../CSS/design.css">
+    <link rel="stylesheet" href="../CSS/vote.css">
+    <link rel="icon" type="image/png" href="../Images/logo transparent LKH.png">
+    <script defer src="../JS/script.js"></script>
+    <script defer src="../JS/vote.js"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="../Images/logo transparent LKH.png" alt="logo LKH">
+        </div>
+
+        <div class="menu">
+            <img src="../Images/icons/menu.png" alt="" style="width: 30px;">
+        </div>
+
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="apropos.html">A propos</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="partenaires.html">Partenaires</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- HERO -->
+    <section class="vote-hero">
+        <div class="container">
+            <h1>Votez pour les talents d’exception</h1>
+            <p>
+                Participez à la première édition des <strong>Lumières Kamsaroises Honors</strong>
+                et soutenez les personnalités qui font briller notre communauté.
+            </p>
+        </div>
+    </section>
+
+    <!-- TIMER -->
+    <section class="vote-timer">
+        <div class="container">
+            <i>Bon à savoir</i>
+            <p id="voteCountdown">Chargement du compte à rebours...</p>
+            <p id="voteStatus"></p>
+        </div>
+    </section>
+
+    <!-- RÈGLES -->
+    <section class="vote-rules">
+        <div class="container">
+            <button class="rules-toggle" id="toggleRules">
+                📌 Voir les règles du vote
+            </button>
+            <div class="rules-content" id="rulesContent">
+                <ul>
+                    <li>Le vote est gratuit et ouvert à tous</li>
+                    <li>Vous pouvez voter dans chaque catégorie</li>
+                    <li>Après un vote dans une catégorie, vous devez attendre <strong>24 heures</strong></li>
+                    <li>Durant ce délai, seul le candidat choisi reste actif</li>
+                    <li>Les résultats seront dévoilés lors de la cérémonie officielle</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    
+   <!-- CATÉGORIES -->
+    <section class="vote-categories" id="voteCategories" style="display:none;">
+        <div class="container">
+            <h2>🏆 Catégories</h2>
+            <p class="subtitle">
+                Choisissez une catégorie pour découvrir les nominés et voter.
+            </p>
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Cartes injectées via JS -->
+            </div>
+        </div>
+    </section>
+
+<!-- Message si vote inactif -->
+<p id="voteInactiveMessage" style="text-align:center; margin-top:20px; color:#c59d5f;"></p>
+
+
+    <div class="footer" >
+        <div class="grids">
+            <img src="../Images/logo transparent LKH.png" alt="logo LKH" class="logo">
+
+            <div class="infoEvenement">
+                <h3>Evenement :</h3>
+                <div class="infos">
+                    <div>
+                        <img src="../Images/icons/goupille-de-localisation.png" alt="iconLieu" >
+                        <span>
+                            Lieu de l'evenement
+                        </span>
+                    </div>
+                    <div>
+                        <img src="../Images/icons/calendrier.png" alt="iconDate" >
+                        <span>
+                            Date de l'evenement
+                        </span>
+                    </div>
+                </div>
+                <span class="follow">Nous suivre</span>
+                <div class="iconsReseaux">
+                    <img src="../Images/icons/facebook.png" alt="iconFacebook" >
+                    <img src="../Images/icons/whatsapp.png" alt="iconFacebook" >
+                </div>
+            </div>
+
+            <div class="infoContact">
+                <h3>Informations</h3>
+                <div class="infos">
+                    <div>
+                        <img src="../Images/icons/telephone.png" alt="iconPhone" >
+                        <p>
+                            +224 620 67 83 70 / +224 624 75 61 52
+                        </p>
+                    </div>
+                    <div>
+                        <img src="../Images/icons/e-mail.png" alt="iconMail" >
+                        <p>
+                            lkhlumiereskamsaroiseshonors @gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
