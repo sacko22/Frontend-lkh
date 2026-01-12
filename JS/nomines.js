@@ -88,7 +88,7 @@ function afficherNomines(nomines, setting, voteStatus) {
     }
 
     card.innerHTML = `
-      <img src="../Images/Nomines/${nomine.photo}" alt="${nomine.nomComplet}">
+      <img src="${nomine.photo}" alt="${nomine.nomComplet}">
       <h3>${nomine.nomComplet}</h3>
       <p class="nombreVoteNomine"><span>${nomine.nombreVotes}</span> vote(s)</p>
       ${buttonHTML}
