@@ -1,31 +1,3 @@
-const form = document.getElementById("nomineForm");
-const message = document.getElementById("message");
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const formData = new FormData(form);
-
-  try {
-    const res = await fetch("https://backend-lkh.onrender.com/api/nomines", {
-      method: "POST",
-      body: formData
-    });
-
-    const data = await res.json();
-
-    if (res.ok) {
-      message.textContent = "Nominé enregistré avec succès ✅";
-      form.reset();
-    } else {
-      message.textContent = data.message || "Erreur lors de l'enregistrement ❌";
-    }
-  } catch (error) {
-    message.textContent = "Erreur serveur ❌";
-  }
-});
-
-
 const categorySelect = document.getElementById("categorySelect");
 
 // Charger les catégories depuis le backend
@@ -47,3 +19,37 @@ async function loadCategories() {
 
 // Appel au chargement de la page
 loadCategories();
+
+
+const form = document.getElementById("nomineForm");
+const message = document.getElementById("message");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  for (let pair of formData.entries()) {
+    console.log(pair[0], pair[1]);
+    }
+
+  try {
+    const res = await fetch("https://backend-lkh.onrender.com/api/nomines", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      message.textContent = "Nominé enregistré avec succès ✅";
+      form.reset();
+    } else {
+      message.textContent = data.message || "Erreur lors de l'enregistrement ❌";
+    }
+  } catch (error) {
+    message.textContent = "Erreur serveur ❌";
+  }
+});
+
+
