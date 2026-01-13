@@ -325,7 +325,7 @@ button:hover{
     width: 60%;
 }
 .footer .grids .infos img{
-    width: 25px;
+    width: 30px;
 }
 .footer .grids .iconsReseaux{
     display: flex;
@@ -338,6 +338,9 @@ button:hover{
 }
 .footer .grids .iconsReseaux img:hover{
     scale: 0.92;
+}
+.footer span{
+    font-size: 18px;
 }
 
 
