@@ -55,7 +55,7 @@ a{
     width: 80px;
 }
 .header{
-    background: linear-gradient(to right, rgba(171, 135, 66, 0.3),rgba(171, 135, 66, 0.3) ),url("../Images/bg.png");
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(171, 135, 66, 0.15),rgba(0, 0, 0, 0.3) ),url("../Images/bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
