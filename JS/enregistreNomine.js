@@ -9,7 +9,7 @@ async function loadCategories() {
     categories.forEach(cat => {
       const option = document.createElement("option");
       option.value = cat._id;
-      option.textContent = cat.nom; // ou cat.name selon ton schema
+      option.textContent = cat.nom; 
       categorySelect.appendChild(option);
     });
   } catch (error) {

@@ -3,11 +3,28 @@ const params = new URLSearchParams(window.location.search);
 const categoryId = params.get("categorie");
 
 const gridNomines = document.getElementById("gridNomines");
+const nomCategorie = document.getElementById("nomCategorieChoisi");
 
 // Sécurité minimale
 if (!categoryId) {
   gridNomines.innerHTML = "<p>Aucune catégorie sélectionnée.</p>";
   throw new Error("Category ID manquant");
+}
+
+// Trouver et recuperer le nom de la categorie choisie depuis le backend
+async function searchNameCategorieSelected() {
+  try {
+    const res = await fetch("https://backend-lkh.onrender.com/api/categories");
+    const categories = await res.json();
+
+    categories.forEach(cat => {
+      if (categoryId === cat._id){
+        nomCategorie = cat.nom 
+      }
+    });
+  } catch (error) {
+    console.error("Erreur chargement catégories:", error);
+  }
 }
 
 /* --------- Génération d'un visitorId unique --------- */
