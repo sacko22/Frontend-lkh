@@ -19,7 +19,7 @@ async function searchNameCategorieSelected() {
 
     categories.forEach(cat => {
       if (categoryId === cat._id){
-        nomCategorie = cat.nom 
+        nomCategorie.textContent = cat.nom 
       }
     });
   } catch (error) {
