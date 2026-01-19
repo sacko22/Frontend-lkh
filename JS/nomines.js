@@ -133,7 +133,10 @@ document.addEventListener("click", async (e) => {
     try {
       const res = await fetch("https://backend-lkh.onrender.com/api/votes", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "x-api-key": "believeInLKHprojet2026"
+        },
         body: JSON.stringify({ nomineId, visitorId })
       });
 
