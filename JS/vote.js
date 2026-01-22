@@ -143,7 +143,7 @@ function lancerCompteRebours(dateDebut, dateFin) {
     // Vote terminé
     countdownEl.className = "countdown closed";
     countdownEl.textContent = "❌ Le vote est terminé";
-    if (statusEl) statusEl.textContent = "Les votes sont clos.";
+    if (statusEl) statusEl.textContent = "Merci infinement d'avoir participé au vote de la première édition";
   }
 
   update();
