@@ -78,14 +78,14 @@ function loadSettingsAndCountdown() {
       const fin = new Date(setting.dateFinVote);
       const voteCategoriesSection = document.getElementById("voteCategories");
 
-      if (setting.voteActif && now >= debut && now <= fin) {
-        // Vote ouvert → afficher la section catégories
-        voteCategoriesSection.style.display = "block";
-        lancerCompteRebours(setting.dateDebutVote, setting.dateFinVote);
-      } else {
-        // Vote fermé → masquer la section catégories
-        voteCategoriesSection.style.display = "none";
-      }
+      // if (setting.voteActif && now >= debut && now <= fin) {
+      //   // Vote ouvert → afficher la section catégories
+      //   voteCategoriesSection.style.display = "block";
+      //   lancerCompteRebours(setting.dateDebutVote, setting.dateFinVote);
+      // } else {
+      //   // Vote fermé → masquer la section catégories
+      //   voteCategoriesSection.style.display = "none";
+      // }
 
     })
     .catch(err => {
